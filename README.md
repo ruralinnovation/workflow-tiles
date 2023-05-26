@@ -8,3 +8,4 @@ We are using:
 
 3. R with the rmapboxapi wrapper to send tiles to mapbox
 
+TODO : Make them into either one script or one makefile
