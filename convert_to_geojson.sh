@@ -9,7 +9,7 @@ MY_PATH="/Users/olivierleroy/data_swamp"
 source streetcred.sh
 
 echo "Working on $1"
-ogr2ogr -f "GeoJSON" $MY_PATH/"$1" \
+ogr2ogr -f "GeoJSONSeq" $MY_PATH/"$1" \
         PG:"host=$HOST dbname=data user=$PGUSER password=$PGPWD port=5432" "$1" \
         -t_srs EPSG:4326 
 
