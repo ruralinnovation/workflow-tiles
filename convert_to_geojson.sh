@@ -4,7 +4,7 @@
 # it takes an argument: name of the table with schema
 # ex ./convert_to_geojson.sh staging.vt_test 
 
-MY_PATH="/Users/olivierleroy/data_swamp"
+MY_PATH="/Users/olivierleroy/data_swamp/tiles"
 
 source streetcred.sh
 

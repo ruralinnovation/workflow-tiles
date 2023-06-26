@@ -6,13 +6,13 @@
 
 library("mapboxapi")
 
-path="/Users/olivierleroy/data_swamp/sch_broadband.bb_map_bl_2022june"
+path="/Users/olivierleroy/data_swamp/tiles/bl/bb_map_co_2022areaz10.mbtiles"
 
 mapboxapi::upload_tiles(
     input = path,
     username = "ruralinno",
     #access_token = tokens,
-    tileset_id = "bb_map_bl_2022june",
-    tileset_name = "bcat_bl_100_20",
+    tileset_id = "bb_map_tr_2022junez11coalesce",
+    tileset_name = "bb_map_tr_2022junez11coalesce",
     multipart = TRUE
 )
