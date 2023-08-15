@@ -6,7 +6,7 @@
 
 set -e
 
-MY_PATH="$HOME/data_swamp/tr"
+MY_PATH="$HOME/data_swamp/tiles/tr"
 
 source streetcred.sh
 
