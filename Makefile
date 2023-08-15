@@ -6,12 +6,20 @@ MAKEFLAGS += --warn-undefined-variables
 
 include config.mk
 
-
+# top level rule
+build : import tiling
 
 ## import	: Import and convert PG table to geojson line delimited
-import : config.mk convert_to_geojson 
+import : config.mk convert_to_geojson.sh 
 	mkdir -p temp/ 
 	bash convert_to_geojson.sh $(MY_TABLE)
+
+## tiling	: Convert geojson to mbtiles
+tiling : 
+	tippecanoe -z11 -Z9 -o temp/$(MY_TABLE).mbtiles \
+    --read-parallel \
+    --no-tile-size-limit \
+    temp/$(MY_TABLE).geojson
 
 ## clean 	: Delet temp/ directory
 clean : 
