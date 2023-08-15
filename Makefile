@@ -21,6 +21,9 @@ tiling :
     --no-tile-size-limit \
     temp/$(MY_TABLE).geojson
 
+## export_to_MB	: Export to mapbox
+export_to_MB : 
+	Rscript sent_to_mapbox $(MY_TABLE)
 ## clean 	: Delet temp/ directory
 clean : 
 	rm -rf temp/
