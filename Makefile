@@ -15,7 +15,7 @@ import : config.mk convert_to_geojson.sh
 	bash convert_to_geojson.sh $(MY_TABLE)
 
 ## tiling	: Convert geojson to mbtiles
-tiling : 
+tiling :
 	tippecanoe -z11 -Z9 -o temp/$(MY_TABLE).mbtiles \
     --read-parallel \
     --no-tile-size-limit \
@@ -24,6 +24,7 @@ tiling :
 ## export_to_MB	: Export to mapbox
 export_to_MB : 
 	Rscript sent_to_mapbox $(MY_TABLE)
+
 ## clean 	: Delet temp/ directory
 clean : 
 	rm -rf temp/
