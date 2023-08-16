@@ -15,7 +15,7 @@ import : config.mk convert_to_geojson.sh
 	bash convert_to_geojson.sh $(MY_TABLE)
 
 ## tiling	: Convert geojson to mbtiles
-tiling :
+tiling : config.mk $(MY_TABLE)
 	tippecanoe $(MAX_Z) $(MIN_Z) -o temp/$(MY_TABLE).mbtiles \
     --read-parallel \
     --no-tile-size-limit \

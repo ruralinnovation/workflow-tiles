@@ -1,16 +1,22 @@
 Here you find a set of scripts moving spatial data in Postgis to a mapbox account. 
 
-We are using:
+They have been put together into a makefile. You can find more about this one with `make help`. 
+
+The tope rule of the makefile will build it up to `.mbtiles`, after that it is your choice to send this tiles to Mapbox (`make export_to_MB`). 
+
+`config.mk` is used to specify the table you want to tiles and both zoom level (min and max, by default 11 and 9). 
+
+We are using (hence you need to have them install):
 
 1.  gdal's `ogr2ogr` -> convert PG to geojson
 
-2.  tippecanoe -> convert geojson to mbtiles 
+2.  `tippecanoe`` -> convert geojson to mbtiles 
 
-3. R with the rmapboxapi wrapper to send tiles to mapbox
+3. R with the `rmapboxapi`` wrapper to send tiles to mapbox
 
 Resources on tippecanoe: https://github.com/mapbox/tippecanoe
 
-Useful bit of knowledge: 
+Useful bits of knowledge: 
 
 - `-P` or `--read-parallel` is only an option when using line-delimited JSON
 
@@ -19,5 +25,3 @@ Useful bit of knowledge:
 - 500K size limit per tile
 
 - `-ab` or `--detect-shared-borders` can be used to reduce the size of polygon by using same simplification on shared borders 
-
-TODO : Make them into either one script or one makefile
