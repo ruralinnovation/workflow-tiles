@@ -15,11 +15,15 @@ import : config.mk convert_to_geojson.sh
 	bash convert_to_geojson.sh $(MY_TABLE)
 
 ## tiling	: Convert geojson to mbtiles
-tiling : config.mk $(MY_TABLE)
+tiling : config.mk 
 	tippecanoe $(MAX_Z) $(MIN_Z) -o temp/$(MY_TABLE).mbtiles \
     --read-parallel \
     --no-tile-size-limit \
     temp/$(MY_TABLE).geojson
+
+## pmtiling	: Convert mbtiles to pmtiles
+pmtiling: config.mk
+	pmtiles convert temp/$(MY_TABLE).mbtiles temp/$(MY_TABLE).pmtiles 
 
 ## export_to_MB	: Export to mapbox
 export_to_MB : 

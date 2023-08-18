@@ -14,6 +14,8 @@ We are using (hence you need to have them install):
 
 3. R with the `rmapboxapi`` wrapper to send tiles to mapbox
 
+4. Optional pmtiles can be used and stored in s3 
+
 Resources on tippecanoe: https://github.com/mapbox/tippecanoe
 
 Useful bits of knowledge: 
@@ -25,3 +27,9 @@ Useful bits of knowledge:
 - 500K size limit per tile
 
 - `-ab` or `--detect-shared-borders` can be used to reduce the size of polygon by using same simplification on shared borders 
+
+Resources on pmtiles: https://protomaps.com/
+
+I moved the pmtiles binary to `/usr/local/bin` 
+
+see pmtiles --help for more
