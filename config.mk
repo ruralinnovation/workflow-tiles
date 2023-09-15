@@ -1,4 +1,4 @@
 
-MY_TABLE="sch_broadband.bb_map_tr_category_2022decareav3"
+MY_TABLE="sch_broadband.bb_map_co_2022decareav3d"
 MAX_Z=-z11
-MIN_Z=-Z9
+MIN_Z=-Z3

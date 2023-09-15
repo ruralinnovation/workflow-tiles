@@ -27,7 +27,7 @@ pmtiling: config.mk
 
 ## export_to_MB	: Export to mapbox
 export_to_MB : 
-	Rscript sent_to_mapbox $(MY_TABLE)
+	Rscript send_to_mapbox.R $(MY_TABLE)
 
 ## clean 	: Delet temp/ directory
 clean : 
