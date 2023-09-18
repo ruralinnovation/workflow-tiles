@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "SSH FS - cori",
+			"uri": "ssh://cori/home/olivierleroy"
+		}
+	],
+	"settings": {}
+}

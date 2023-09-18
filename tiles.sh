@@ -3,8 +3,9 @@
 # -zg z is for zoom and g is for automatically detect maz zoom 
 
 # cookbook 
- nohup tippecanoe -z10 -o bb_map_co_2022areaz10.mbtiles \
+ nohup tippecanoe -z11 -Z9 -o tr_25_3_dec2022v3_z11z9.mbtiles \
     --read-parallel \
-    bb_map_co_2022area.geojson
+    --no-tile-size-limit \
+    sch_broadband.bb_map_tr_25_3_2022decareav3b.geojson &
 
 #

@@ -2,17 +2,23 @@
 # Author Olivier Leroy
 # Goal: push to mapbox the tiles created
 # the access tokens is stored in ~/.Renviron 
-# see mapboxapi::get_mb_access_token()
-
+# see 
 library("mapboxapi")
+# mapboxapi::get_mb_access_token()
 
-path="/Users/olivierleroy/data_swamp/tiles/bl/bb_map_co_2022areaz10.mbtiles"
+args <- commandArgs(trailingOnly = TRUE)
+#print(args[1])
+
+path <- paste0(getwd(), "/temp/", args[1], ".mbtiles")
+#print(path)
+id <- unlist(strsplit(path, ".", fixed = TRUE))[2]
+#print(unlist(strsplit(path, ".", fixed = TRUE))[2])
 
 mapboxapi::upload_tiles(
     input = path,
     username = "ruralinno",
     #access_token = tokens,
-    tileset_id = "bb_map_tr_2022junez11coalesce",
-    tileset_name = "bb_map_tr_2022junez11coalesce",
+    tileset_id = id,
+    tileset_name = id,
     multipart = TRUE
 )
