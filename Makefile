@@ -18,7 +18,9 @@ import : config.mk convert_to_geojson.sh
 tiling : config.mk 
 	tippecanoe $(MAX_Z) $(MIN_Z) -o temp/$(MY_TABLE).mbtiles \
     --read-parallel \
-    --no-tile-size-limit \
+    --full-detail=12 \
+	--minimum-detail=10 \
+	--low-detail=10 \
     temp/$(MY_TABLE).geojson
 
 ## pmtiling	: Convert mbtiles to pmtiles
