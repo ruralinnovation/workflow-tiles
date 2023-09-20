@@ -11,7 +11,7 @@ args <- commandArgs(trailingOnly = TRUE)
 
 path <- paste0(getwd(), "/temp/", args[1], ".mbtiles")
 #print(path)
-id <- unlist(strsplit(path, ".", fixed = TRUE))[2]
+id <- unlist(strsplit(path, "..", fixed = TRUE))[2]
 #print(unlist(strsplit(path, ".", fixed = TRUE))[2])
 
 mapboxapi::upload_tiles(
