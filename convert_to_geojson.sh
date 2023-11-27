@@ -8,8 +8,9 @@
 source streetcred.sh
 
 echo "Working on $1"
+<<<<<<< HEAD
 ogr2ogr -f "GeoJSONSeq" temp/"$1" \
-        PG:"host=$HOST dbname=data user=$PGUSER password=$PGPWD port=5432" "$1" \
+        PG:"host=$PGHOST dbname=data user=$PGUSER password=$PGPASSWORD port=5432" "$1" \
         -t_srs EPSG:4326
 
 mv temp/"$1" temp/"$1".geojson

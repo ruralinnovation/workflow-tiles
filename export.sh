@@ -10,7 +10,7 @@ source streetcred.sh
 
 echo "Working on $1"
 ogr2ogr -f "GeoJSONSeq" $MY_PATH/"$1" \
-        PG:"host=$HOST dbname=data user=$PGUSER password=$PGPWD port=5432" "$1" \
+        PG:"host=$PGHOST dbname=data user=$PGUSER password=$PGPWD port=5432" "$1" \
         -t_srs EPSG:4326 
 
 ls "$MY_PATH"
