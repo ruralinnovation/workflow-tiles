@@ -36,4 +36,8 @@ I moved the pmtiles binary to `/usr/local/bin`
 
 see pmtiles --help for more
 
-Blog post: https://www.milesmcbain.com/posts/vector-tiles/ 
+Blog post from Miles Mcbain: 
+
+- https://www.milesmcbain.com/posts/vector-tiles/
+
+- https://github.com/qfes/mapbox-tile-server the repo of their server 
