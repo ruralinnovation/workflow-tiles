@@ -41,3 +41,9 @@ Blog post from Miles Mcbain:
 - https://www.milesmcbain.com/posts/vector-tiles/
 
 - https://github.com/qfes/mapbox-tile-server the repo of their server 
+
+More on mbtiles/geojson : https://ckochis.com/create-custom-vector-tiles
+
+Mabpbox documentation : https://docs.mapbox.com/data/tilesets/guides/vector-tiles-standards/#encoding-attributes
+
+this repo has a lot going on: https://github.com/mapbox/awesome-vector-tiles/
