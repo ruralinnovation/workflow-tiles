@@ -19,7 +19,7 @@ tiling : config.mk
 	tippecanoe $(MAX_Z) $(MIN_Z) -o temp/$(MY_TABLE).mbtiles \
     --read-parallel \
     --full-detail=12 \
-	--minimum-detail=8 \
+	--minimum-detail=9 \
 	--low-detail=10 \
     temp/$(MY_TABLE).geojson
 

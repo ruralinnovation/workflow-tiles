@@ -1,4 +1,4 @@
 
-MY_TABLE="proj_bead.bead_blocksv1"
+MY_TABLE="proj_bead.new_england_isp"
 MAX_Z=-z11
-MIN_Z=-Z9
+MIN_Z=-Z4
