@@ -19,9 +19,17 @@ tiling : config.mk
 	tippecanoe $(MAX_Z) $(MIN_Z) -o temp/$(MY_TABLE).mbtiles \
     --read-parallel \
     --full-detail=12 \
-	--minimum-detail=9 \
+	--minimum-detail=8 \
 	--low-detail=10 \
     temp/$(MY_TABLE).geojson
+
+## point_tiles	: convert point geojson to mbtiles
+point_tiles : config.mk
+	tippecanoe $(MAX_Z) $(MIN_Z) -o temp/$(MY_TABLE).mbtiles \
+		--read-parallel \
+		--gamma=3 \
+		--cluster-densest-as-needed \
+	temp/$(MY_TABLE).geojson
 
 ## pmtiling	: Convert mbtiles to pmtiles
 pmtiling: config.mk

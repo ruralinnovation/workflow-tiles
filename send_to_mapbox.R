@@ -4,7 +4,7 @@
 # the access tokens is stored in ~/.Renviron 
 # see 
 library("mapboxapi")
-# mapboxapi::get_mb_access_token()
+ mapboxapi::get_mb_access_token()
 
 args <- commandArgs(trailingOnly = TRUE)
 #print(args[1])
