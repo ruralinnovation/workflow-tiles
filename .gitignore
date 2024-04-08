@@ -1,3 +1,6 @@
 streetcred.sh
 .DS_Store
 temp/
+data/
+*.Rproj
+.Rproj.user/
