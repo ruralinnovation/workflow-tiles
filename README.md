@@ -1,4 +1,6 @@
-Here you find a set of scripts moving spatial data in Postgis to a mapbox account. 
+![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)
+
+Here you find a set of scripts moving spatial data in Postgis to a MapBox account. 
 
 They have been put together into a makefile. You can find more about this one with `make help`. 
 
@@ -8,15 +10,19 @@ The top rule of the makefile will build it up to `.mbtiles`, after that it is yo
 
 We are using (hence you need to have them install):
 
-1.  gdal's `ogr2ogr` -> convert PG to geojson
+1.  GDAL's `ogr2ogr` to  convert PG to geojson (`convert_to_geosjon.sh`)
 
-2.  `tippecanoe`` -> convert geojson to mbtiles 
+2.  `tippecanoe` -> convert geojson to mbtiles  
 
-3. R with the `rmapboxapi`` wrapper to send tiles to mapbox
+Here you an have option for polygons (`make tiling`) and an other one for points (`make point_tiles`) 
 
-4. Optional pmtiles can be used and stored in s3 
+3. R with the `mapboxapi` wrapper to send tiles to mapbox
+
+4. Optional pmtiles can be used and stored in s3 (`make pmtiling`) 
 
 ### Resources: 
+
+R'mapboxapi: [https://walker-data.com/mapboxapi/](https://walker-data.com/mapboxapi/)
 
 On tippecanoe: https://github.com/mapbox/tippecanoe
 
