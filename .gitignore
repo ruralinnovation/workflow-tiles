@@ -180,5 +180,5 @@ aws-config.js
 .graphqlconfig
 sam-beta-installation
 spec
-streetcred.sh
+.Renviron
 temp/

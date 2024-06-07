@@ -1,11 +1,11 @@
 #!/bin/bash
-# shellcheck source=streetcred.sh
-# credential are store in an other file: streetcred.sh
+# shellcheck source=.Renviron
+# credential are store in an other file: .Renviron
 # it takes an argument: name of the table with schema
 # ex ./convert_to_geojson.sh staging.vt_test
 
-# shellcheck source=streetcred.sh
-source streetcred.sh
+# shellcheck source=.Renviron
+source .Renviron
 
 echo "Working on $1"
 <<<<<<< HEAD
