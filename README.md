@@ -1,8 +1,26 @@
 ![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)
 
-Here you find a set of scripts moving spatial data in Postgis to a MapBox account. 
+Here you find a set of scripts (shell and R) for moving spatial data in Postgis to a MapBox account. 
 
-They have been put together into a makefile. You can find more about this one with `make help`. 
+## Dependencies
+
+We have used: 
+
+- GNU Make 3.81
+
+- GDAL 3.8.5
+
+- tippecanoe v2.53.0 (https://github.com/felt/tippecanoe)
+
+- R version 4.3.3 with mapboxapi_0.6
+
+- pmtiles 1.19.2
+
+- `.pgpass` a pgpass file at the `~/` is needed to specify host, user and password to connect to the PG database
+
+## Workflow
+
+Shell and R scripts have been put together into a makefile. You can find more about this one with `make help`. 
 
 The top rule of the makefile will build it up to `.mbtiles`, after that it is your choice to send this tiles to Mapbox (`make export_to_MB`). 
 
@@ -18,11 +36,11 @@ Here you an have option for polygons (`make tiling`) and an other one for points
 
 3. R with the `mapboxapi` wrapper to send tiles to mapbox
 
-4. Optional pmtiles can be used and stored in s3 (`make pmtiling`) 
+4. Optional pmtiles can be generated (`make pmtiling`) 
 
 ### Resources: 
 
-R'mapboxapi: [https://walker-data.com/mapboxapi/](https://walker-data.com/mapboxapi/)
+R's mapboxapi: [https://walker-data.com/mapboxapi/](https://walker-data.com/mapboxapi/)
 
 On tippecanoe: https://github.com/mapbox/tippecanoe
 
