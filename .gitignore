@@ -176,3 +176,4 @@ report.html
 .DS_Store
 data/
 temp/
+config.mk
