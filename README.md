@@ -24,7 +24,8 @@ Shell and R scripts have been put together into a makefile. You can find more ab
 
 The top rule of the makefile will build it up to `.mbtiles`, after that it is your choice to send this tiles to Mapbox (`make export_to_MB`). 
 
-`config.mk` is used to specify the table you want to tiles and both zoom level (min and max, by default 11 and 9). 
+For the first run you will need to copy `config.mk.example` to `config.mk` and update the input arguments (table name, maximum zoom, and  minium zoon). 
+The make file will use these values to specify the table you convert to tiles (`MY_TABLE`) and both zoom levels (`MAX_Z` and `MIN_Z`, by default 11 and 9). 
 
 We are using (hence you need to have them install):
 
