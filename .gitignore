@@ -7,10 +7,11 @@
 **/spec
 **/swagger/dist
 
+.Renviron
 .Rhistory
 .Rprofile
-.Rproj.user
-*.Rproj
+*Rproj*
+.Rproj.user/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -173,12 +174,5 @@ output.xml
 report.html
 
 .DS_Store
-AWS_SAM_CLI_64_PY3.msi
-aws-sam-cli-linux-x86_64.zip
-amplify.yml
-aws-config.js
-.graphqlconfig
-sam-beta-installation
-spec
-.Renviron
+data/
 temp/
