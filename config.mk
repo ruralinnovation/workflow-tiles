@@ -1,4 +1,4 @@
 
-MY_TABLE="sch_broadband.bb_map_co_2022decareav3e"
+MY_TABLE="proj_bead.new_england_v3"
 MAX_Z=-z11
-MIN_Z=-Z3
+MIN_Z=-Z9

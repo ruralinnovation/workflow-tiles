@@ -37,7 +37,7 @@ convert_to_mbtile <- function (schema_name, table_name, max_z = 11, min_z = 3) {
   #   --no-tile-compression \  ## <= non-gzipped is easier to debug/inspect, BUT mvtview server will NOT work with this option
   #   --read-parallel \
   #   temp/$(MY_TABLE).geojson
-  tile_cmd <- paste0('tippecanoe -z', max_z, ' -Z', min_z, ' -o ', data_path, '/', table_name,'.mbtiles  --full-detail=12 --minimum-detail=5 --low-detail=7 --read-parallel ', data_path, '/', table_name,'.json')
+  tile_cmd <- paste0('tippecanoe -z', max_z, ' -Z', min_z, ' -o ', data_path, '/', table_name,'.mbtiles --force  --full-detail=12 --minimum-detail=5 --low-detail=7 --read-parallel ', data_path, '/', table_name,'.json')
   
   message(tile_cmd)
   

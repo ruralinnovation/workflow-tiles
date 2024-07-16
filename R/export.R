@@ -2,10 +2,10 @@ query <- "select
 	           * 
             from 
               sch_broadband.bb_map_bl_2022decarea
-            where state_abbr = 'AR';"
+            where state_abbr = '%s';"
 
 
-load_data <- function(query){
+load_state_data <- function(query, schema = 'sch_broadband', table = 'bb_map_bl_2022decarea', state_abbr = '%s'){
     username <- Sys.getenv("DB_USER")
     password <- Sys.getenv("DB_PWD")
   
@@ -19,7 +19,7 @@ load_data <- function(query){
                         )
   
 
-  
+  # TODO: use query with schema/table/state_abbr params in following data fetch...
   bob <- sf::read_sf(con, "sch_broadband.bb_map_bl_2022decarea")
   DBI::dbDisconnect(con)
   return(bob)
