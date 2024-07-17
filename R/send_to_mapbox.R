@@ -1,10 +1,13 @@
-# Date Mai 2023
+# Date May 2023
 # Author Olivier Leroy
 # Goal: push to mapbox the tiles created
-# the access tokens is stored in ~/.Renviron 
-# see 
+# the access tokens is stored in ~/.Renviron
+
 library("mapboxapi")
- mapboxapi::get_mb_access_token()
+
+if (!is.character(mapboxapi::get_mb_access_token())) {
+  print("see mapboxapi::mb_access_token() for help")
+}
 
 args <- commandArgs(trailingOnly = TRUE)
 #print(args[1])
