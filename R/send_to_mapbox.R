@@ -12,10 +12,14 @@ if (!is.character(mapboxapi::get_mb_access_token())) {
 args <- commandArgs(trailingOnly = TRUE)
 #print(args[1])
 
-name <- args[1]
+id <- gsub("\\.", "_", args[1])
 
 path <- paste0(getwd(), "/temp/", args[1], ".mbtiles")
-id <- unlist(strsplit(path, ".", fixed = TRUE))[2]
+name <- unlist(strsplit(path, ".", fixed = TRUE))[2]
+
+cat(sprintf("id is %s\n", id))
+
+cat(sprintf("name is %s\n", name))
 
 mapboxapi::upload_tiles(
     input = path,
