@@ -6,7 +6,7 @@ MAKEFLAGS += --warn-undefined-variables
 
 include config.mk
 
-NEW_NAMES := $(echo $MY_TABLE | cut -d . -f 2)
+NEW_NAMES := `echo $(MY_TABLE) | cut -d . -f 2`
 
 # top level rule
 build : import tiling
@@ -17,7 +17,7 @@ import : config.mk convert_to_geojson.sh
 	bash convert_to_geojson.sh $(MY_TABLE)
 
 ## tiling	: Convert geojson to mbtiles
-tiling : config.mk 
+tiling : config.mk
 	tippecanoe -z$(MAX_Z) -Z$(MIN_Z) -o temp/$(MY_TABLE).mbtiles \
     --read-parallel \
     --full-detail=12 \
