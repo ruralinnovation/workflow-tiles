@@ -18,17 +18,17 @@ import : config.mk convert_to_geojson.sh
 
 ## tiling	: Convert geojson to mbtiles
 tiling : config.mk
-	tippecanoe -z$(MAX_Z) -Z$(MIN_Z) -o temp/$(MY_TABLE).mbtiles \
+	tippecanoe --force -z$(MAX_Z) -Z$(MIN_Z) -o temp/$(MY_TABLE).mbtiles \
     --read-parallel \
-    --full-detail=12 \
-	--minimum-detail=8 \
-	--low-detail=10 \
+    --full-detail=11 \
+	--minimum-detail=6 \
+	--low-detail=9 \
 	-l $(NEW_NAMES) \
     temp/$(MY_TABLE).geojson
 
 ## point_tiles	: convert point geojson to mbtiles
 point_tiles : config.mk
-	tippecanoe -z$(MAX_Z) -Z$(MIN_Z) -o temp/$(MY_TABLE).mbtiles \
+	tippecanoe --force -z$(MAX_Z) -Z$(MIN_Z) -o temp/$(MY_TABLE).mbtiles \
 		--read-parallel \
 		--gamma=3 \
 		--cluster-densest-as-needed \
