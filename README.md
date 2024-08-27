@@ -1,6 +1,6 @@
 ![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)
 
-Here you find a set of scripts (shell and R) for moving spatial data in Postgis to a MapBox account. 
+This a set of scripts (shell and R) for converting spatial data in Postgis to Mapbox Vector Tiles and uploading those tiles to a Mapbox account. 
 
 ## Dependencies
 
